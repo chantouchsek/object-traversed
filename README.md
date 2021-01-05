@@ -1,6 +1,6 @@
 #object-traversed
 ==============
-[![Build Status](https://travis-ci.org/wmira/object-traversed.svg?branch=master)](https://travis-ci.org/wmira/object-traversed)
+[![Build Status](https://travis-ci.org/chantouch/object-traversed.svg?branch=main)](https://travis-ci.org/chantouch/object-traversed)
 [![view on npm](http://img.shields.io/npm/v/object-traversed.svg)](https://www.npmjs.org/package/object-traversed)
 
 A very simple utility on traversing object graphs using a string.
