@@ -1,0 +1,30 @@
+{
+  "name": "object-traversed",
+  "main": "index.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/chantouch/object-traversed",
+  "authors": [
+    "Chantouch Sek <chantouchsek.cs83@gmail.com>"
+  ],
+  "description": "Parse , check and traversed javascript objects via string path",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "object",
+    "deep",
+    "bean",
+    "path",
+    "traversed"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

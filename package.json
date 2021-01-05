@@ -1,0 +1,31 @@
+{
+  "name": "object-traversed",
+  "version": "0.0.1",
+  "description": "Parse , check and traverse javascript objects via string path",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "uglifyjs --compress --mangle -- index.js > dist/index.js",
+    "test": "node_modules/mocha/bin/mocha"
+  },
+  "keywords": [
+    "object",
+    "deep",
+    "bean",
+    "path",
+    "traverse"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chantouch/object-traverse.git"
+  },
+  "author": {
+    "email": "chantouchsek.cs83@gmail.com",
+    "name": "Chantouch Sek",
+    "url": "https://bookingkh.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^8.2.1",
+    "uglify-js": "^3.12.4"
+  }
+}
