@@ -68,8 +68,7 @@
     return {
       get: function (path, defaultVal) {
         const traversed = traverse(obj, path);
-
-        if (traversed !== undefined) {
+        if (!nullOrUndefined(traversed)) {
           return traversed;
         }
         return defaultVal;
@@ -187,7 +186,6 @@
       /**
        *
        *
-       * @param obj
        * @param path
        * @returns {boolean}
        */
@@ -197,7 +195,6 @@
 
       /**
        *
-       * @param obj
        * @param path
        * @returns {boolean}
        */
@@ -208,7 +205,6 @@
       /**
        *
        *
-       * @param obj
        * @param path
        * @returns {boolean}
        */
@@ -219,7 +215,6 @@
       /**
        *
        *
-       * @param obj
        * @param path
        * @returns {boolean}
        */
