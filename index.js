@@ -47,14 +47,12 @@
    */
   const traverseAlmost = function (obj, path) {
     const subPath = parseAsParentChild(path);
-
     if (subPath.parent) {
       return { traversed: traverse(obj, subPath.parent), childPath: subPath.child }
     }
     return undefined;
   };
-  const doNothing = function () {
-  };
+  const doNothing = () => {};
 
   const noop = {
     get: doNothing, has: doNothing, set: doNothing, push: doNothing,
@@ -147,7 +145,6 @@
               walked = walked[p] = {};
             }
           }
-
         });
       },
 
@@ -179,9 +176,7 @@
         } else if (obj && typeof obj[path] === 'function') {
           return obj[path].apply(obj, args);
         }
-
       },
-
 
       /**
        *
