@@ -85,7 +85,7 @@ describe('object traverse tests', function(){
         assert.equal(traverse(objMod).set('hey',1),1);
         assert.equal(traverse(objMod).get('hey'),1);
 
-        assert.equal(traverse(objMod).get('hey2',undefined));
+        assert.equal(traverse(objMod).get('hey2'), undefined);
         assert.equal(traverse(objMod).set('hey2','X'),'X');
         assert.equal(traverse(objMod).get('hey2'),'X');
 
@@ -96,6 +96,14 @@ describe('object traverse tests', function(){
         assert.equal(traverse(objMod).get('subField.newPath.x'),'x');
         assert.equal(traverse(objMod).get('subField.newPath.y'),'y');
     });
+
+
+    it('should not allow protopath overwrite', function() {
+      traverse({}).set('__proto__.polluted', true);
+      assert.equal({}.polluted, undefined);
+      traverse({}).set('constructor.prototype.polluted', true);
+      assert.equal({}.polluted, undefined);
+    })
 
     var objFunc = {
         field: function(a) {
@@ -127,10 +135,10 @@ describe('object traverse tests', function(){
         nested: { x : 'y'}
     };
     it ( 'should properly delete path' , function() {
-        assert.equal(traverse(deleteObj).delete('x'));
+        assert.equal(traverse(deleteObj).delete('x'), undefined);
         assert.equal(traverse(deleteObj).get('x'),undefined);
         assert.equal(traverse(deleteObj).get('nested.x'),'y');
-        assert.equal(traverse(deleteObj).delete('nested.x'));
+        assert.equal(traverse(deleteObj).delete('nested.x'), undefined);
         assert.equal(traverse(deleteObj).get('nested.x'),undefined);
     });
 

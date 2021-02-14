@@ -18,9 +18,9 @@
   }
   const traverse = function (obj, path) {
     return path.split(".").reduce(function (prev, current) {
-      if (prev) {
-        return prev[current];
-      }
+      if (!prev) return undefined;
+      if (prev[current] === Object.prototype) return prev;
+      return prev[current];
     }, obj);
   }
 
@@ -52,7 +52,7 @@
     }
     return undefined;
   };
-  const doNothing = () => {};
+  const doNothing = () => { };
 
   const noop = {
     get: doNothing, has: doNothing, set: doNothing, push: doNothing,
