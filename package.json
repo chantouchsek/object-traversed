@@ -1,6 +1,6 @@
 {
   "name": "object-traversed",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Parse, check and traverse javascript objects via string path",
   "main": "dist/index.js",
   "types": "index.d.ts",
