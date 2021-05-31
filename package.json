@@ -1,7 +1,7 @@
 {
   "name": "object-traversed",
-  "version": "0.0.3",
-  "description": "Parse , check and traverse javascript objects via string path",
+  "version": "0.0.4",
+  "description": "Parse, check and traverse javascript objects via string path",
   "main": "dist/index.js",
   "scripts": {
     "build": "uglifyjs --compress --mangle -- index.js > dist/index.js",
@@ -9,11 +9,15 @@
     "prepublish": "yarn build"
   },
   "keywords": [
-    "object",
     "deep",
     "bean",
     "path",
-    "traverse"
+    "object",
+    "traverse",
+    "traversed",
+    "deep-object",
+    "object traverse",
+    "object traversed"
   ],
   "repository": {
     "type": "git",
@@ -26,7 +30,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "mocha": "^8.2.1",
-    "uglify-js": "^3.12.4"
+    "mocha": "^8.4.0",
+    "uglify-js": "^3.13.8"
   }
 }

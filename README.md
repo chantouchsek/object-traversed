@@ -1,19 +1,18 @@
-#object-traversed
+#Object Traversed
 ==============
 [![Build Status](https://travis-ci.org/chantouch/object-traversed.svg?branch=main)](https://travis-ci.org/chantouch/object-traversed)
 [![view on npm](http://img.shields.io/npm/v/object-traversed.svg)](https://www.npmjs.org/package/object-traversed)
 
 A very simple utility on traversing object graphs using a string.
 
-## Changelog
-v0.0.1
-* Initial package
-
 ## How to use
 
+```npm
+npm install --save object-traversed
 ```
-   npm install --save-dev object-traversed
-   
+
+```yarn
+yarn add  object-traversed
 ```
 
 If using via normal javascript include, then it is exported as window.objectTraverse.
@@ -64,5 +63,3 @@ traversed(graph).push('a.b.c',val);
 traversed(graph).create('a.b.c');
 traversed(graph).get('a.b.c'); //{ a : { b : { c: {} } }
 ```
-
-
