@@ -1,8 +1,9 @@
 {
   "name": "object-traversed",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Parse, check and traverse javascript objects via string path",
   "main": "dist/index.js",
+  "types": "index.d.ts",
   "scripts": {
     "build": "uglifyjs --compress --mangle -- index.js > dist/index.js",
     "test": "node_modules/mocha/bin/mocha",

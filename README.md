@@ -2,8 +2,11 @@
 ==============
 [![Build Status](https://travis-ci.org/chantouch/object-traversed.svg?branch=main)](https://travis-ci.org/chantouch/object-traversed)
 [![view on npm](http://img.shields.io/npm/v/object-traversed.svg)](https://www.npmjs.org/package/object-traversed)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+[![npm](https://img.shields.io/npm/dt/object-traversed.svg?style=flat-square)](https://npmjs.com/package/object-traversed)
+[![npm](https://img.shields.io/npm/dm/object-traversed.svg?style=flat-square)](https://npmjs.com/package/object-traversed)
 
-A very simple utility on traversing object graphs using a string.
+A very simple, lightweight utility on traversing object graphs using a string.
 
 ## How to use
 
@@ -63,3 +66,7 @@ traversed(graph).push('a.b.c',val);
 traversed(graph).create('a.b.c');
 traversed(graph).get('a.b.c'); //{ a : { b : { c: {} } }
 ```
+
+## 🔑 License
+
+MIT © [ChantouchSek](https://github.com/chantouch)

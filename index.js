@@ -65,6 +65,11 @@
             return noop;
         }
         return {
+            /**
+             * Helper method to value by string path
+             *
+             * @returns {Object}
+             */
             get: function (path, defaultVal) {
                 const traversed = traverse(obj, path);
                 if (!nullOrUndefined(traversed)) {
@@ -111,7 +116,7 @@
              * @param path
              * @param val
              */
-            push: function (path, val, create) {
+            push: function (path, val) {
                 let traversed;
                 const traversedAlmost = traverseAlmost(obj, path);
                 if (traversedAlmost && traversedAlmost.traversed) {
@@ -160,7 +165,6 @@
                 } else if (obj) {
                     delete obj[path];
                 }
-                return undefined
             },
 
             /**
